@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Alessandra Bratficher · Psicologia · Cosmópolis, SP</title>
+<meta name="description" content="Psicóloga clínica em Cosmópolis, SP. Atendimento presencial e online, com hora marcada.">
+<meta name="theme-color" content="#2F5D50">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Inter:wght@400;500&amp;display=swap">
+<style>
+.panel[hidden]{display:none}
+@media (min-width:961px){.panel{display:none!important}}
+body{margin:0;background:#FFFFFF}
+*{box-sizing:border-box}
+a{color:#2F5D50}a:hover{color:#1F4238}
+.ab{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:#2B2B2B;-webkit-font-smoothing:antialiased}
+.ab h1,.ab h2,.ab h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;color:#2F5D50;margin:0;line-height:1.15}
+.ab p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.read{max-width:640px}
+.sec{position:relative;overflow:hidden;padding:96px 0}
+.sand{background:#F3EBDD}
+.white{background:#FFFFFF}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#2F5D50;font-weight:500}
+.h2{font-size:44px}
+.pend{background:#E6D8BE;border:1.5px dotted #A9BFAF;border-radius:6px;padding:0 6px;white-space:normal}
+.blob{position:absolute;pointer-events:none;z-index:0}
+.rel{position:relative;z-index:1}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 26px;border-radius:999px;font-family:'Inter',system-ui,sans-serif;font-size:16px;font-weight:500;text-decoration:none;line-height:1.2;transition:background-color .2s ease,color .2s ease}
+.btn-p{background:#2F5D50;color:#FFFFFF;border:1.5px solid #2F5D50}
+.btn-p:hover{background:#244A40;color:#FFFFFF}
+.btn-s{background:transparent;color:#2F5D50;border:1.5px solid #2F5D50}
+.btn-s:hover{background:#2F5D50;color:#FFFFFF}
+.btn:focus-visible,.navlink:focus-visible,summary:focus-visible,.menubtn:focus-visible,.fab:focus-visible{outline:2px solid #2F5D50;outline-offset:3px}
+
+/* Menu */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid rgba(184,150,62,.55)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px}
+.brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:400;color:#2F5D50;text-decoration:none;line-height:1.1;display:inline-flex;align-items:center;min-height:44px}
+.brand .bdot,.brand .bsub{color:#2B2B2B;opacity:.75}
+.brand .bname{white-space:nowrap}
+.nav{display:flex;align-items:center;gap:4px}
+.navlink{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;color:#2B2B2B;text-decoration:none;font-size:15px;border-radius:8px}
+.navlink:hover{color:#2F5D50}
+.btn-sm{min-height:44px;padding:10px 20px;font-size:15px}
+.menubtn{display:none;width:48px;height:48px;align-items:center;justify-content:center;background:transparent;border:0;border-radius:12px;color:#2F5D50;cursor:pointer;padding:0}
+.panel{border-top:1px solid #EFE6D6;background:#FFFFFF;padding:12px 24px 24px;display:flex;flex-direction:column;gap:4px}
+.panel .navlink{font-size:17px;min-height:48px;padding:0 4px;border-bottom:1px solid #F3EBDD;border-radius:0}
+.panel .btn{margin-top:16px}
+
+/* Topo */
+.hero{padding:120px 0 128px}
+.hero h1{font-size:64px;max-width:720px}
+.hero-sub{margin-top:24px;font-size:18px;color:#2B2B2B}
+.hero-cta{margin-top:40px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.small{font-size:14px;color:#4A4A4A}
+
+/* Faixa de confiança */
+.trust{padding:56px 0}
+.trust-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center}
+.trust-item{display:flex;align-items:center;justify-content:center;gap:14px;padding:12px 24px;font-size:16px;text-align:left}
+.trust-item + .trust-item{border-left:1px solid rgba(184,150,62,.6)}
+.ico{flex:none;color:#2F5D50}
+
+/* Sobre */
+.sobre-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:center}
+.photo-wrap{position:relative;width:280px;max-width:100%;margin:0 auto}
+.photo-wrap .blob{width:340px;height:380px;left:-40px;top:-24px}
+.photo{position:relative;z-index:1;display:block;width:280px;max-width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:140px 140px 140px 140px / 175px 175px 175px 175px}
+.sobre-text h2{margin-top:12px}
+.sobre-text .body{margin-top:28px;display:flex;flex-direction:column;gap:16px}
+.sobre-text .crp{margin-top:28px;font-size:14px;color:#4A4A4A;padding-top:20px;border-top:1px solid rgba(184,150,62,.55);display:inline-block}
+
+/* Atendimento */
+.cards{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.card{background:#FFFFFF;border-radius:16px;padding:36px 30px;box-shadow:0 1px 2px rgba(47,93,80,.04),0 8px 24px rgba(47,93,80,.04);display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:26px;font-weight:400}
+.card p{font-size:16px}
+
+/* Como funciona */
+.steps{margin-top:56px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;position:relative}
+.steps::before{content:"";position:absolute;top:32px;left:calc(16.66% + 32px);right:calc(16.66% + 32px);height:1px;background:rgba(184,150,62,.6)}
+.step{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;position:relative}
+.num{width:64px;height:64px;border-radius:50%;background:#FFFFFF;border:1px solid #A9BFAF;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:400;color:#2F5D50;position:relative;z-index:1}
+.step h3{font-size:26px;font-weight:400}
+.step p{max-width:300px}
+.center{text-align:center}
+.cta-center{margin-top:56px;display:flex;justify-content:center}
+
+/* FAQ */
+.faq{margin:48px auto 0;max-width:720px;display:flex;flex-direction:column;gap:12px}
+.faq details{background:#FFFFFF;border-radius:16px;box-shadow:0 1px 2px rgba(47,93,80,.04)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:16px 24px;font-size:17px;font-weight:500;color:#2B2B2B;border-radius:16px}
+.faq summary::-webkit-details-marker{display:none}
+.plus{flex:none;color:#2F5D50;transition:transform .25s ease}
+.faq details[open] .plus{transform:rotate(45deg)}
+.faq .ans{padding:0 24px 22px;color:#2B2B2B}
+
+/* Contato */
+.contato{text-align:center}
+.avatar{display:block;width:160px;height:160px;border-radius:50%;object-fit:cover;margin:0 auto 28px;box-shadow:0 0 0 6px #F3EBDD}
+.c-list{margin:32px auto 0;max-width:520px;display:flex;flex-direction:column;gap:14px;align-items:center;padding:0;list-style:none}
+.c-list li{display:flex;align-items:flex-start;gap:12px;text-align:left}
+.c-list .ico{margin-top:3px}
+.c-btns{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.insta{margin-top:28px;display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:16px;text-decoration:none}
+.insta:hover{text-decoration:underline}
+
+/* Aviso e rodapé */
+.crise{background:#F3EBDD;padding:20px 0;text-align:center;font-size:14px;color:#2B2B2B;border-top:1px solid rgba(184,150,62,.35)}
+.foot{background:#2F5D50;color:#FFFFFF;padding:56px 0 104px}
+.foot .fbrand{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:300}
+.foot .fl{margin-top:6px;font-size:15px;color:rgba(255,255,255,.88)}
+.foot .rule{height:1px;background:rgba(184,150,62,.7);margin:32px 0 20px;max-width:120px}
+.foot .credit{font-size:13px;color:rgba(255,255,255,.78)}
+.foot .credit a{color:#FFFFFF;text-decoration:underline;text-underline-offset:3px}
+
+/* WhatsApp flutuante */
+.fab{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;background:#2F5D50;color:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(47,93,80,.28);text-decoration:none}
+.fab:hover{background:#244A40;color:#FFFFFF}
+
+/* Animações (calmas; desligadas com prefers-reduced-motion) */
+@keyframes rv{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes rvFade{from{opacity:0}to{opacity:1}}
+@keyframes heroIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes lineIn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes lineInY{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes floatA{0%{transform:translate(0,0) rotate(0deg) scale(1)}50%{transform:translate(-18px,14px) rotate(8deg) scale(1.04)}100%{transform:translate(10px,-10px) rotate(-6deg) scale(.98)}}
+@keyframes floatB{0%{transform:translate(0,0) rotate(0deg)}50%{transform:translate(16px,-12px) rotate(-10deg)}100%{transform:translate(-8px,10px) rotate(6deg)}}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+@keyframes breathe{0%{box-shadow:0 6px 18px rgba(47,93,80,.28),0 0 0 0 rgba(169,191,175,.55)}70%{box-shadow:0 6px 18px rgba(47,93,80,.28),0 0 0 14px rgba(169,191,175,0)}100%{box-shadow:0 6px 18px rgba(47,93,80,.28),0 0 0 0 rgba(169,191,175,0)}}
+@keyframes popIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
+@keyframes ansIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes photoIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+
+.gline{display:block;width:96px;height:1px;background:#B8963E;margin-top:28px;transform-origin:left center}
+.ring{position:absolute;inset:-14px;width:188px;height:188px;pointer-events:none;color:#B8963E}
+.avatar-wrap{position:relative;width:160px;height:160px;margin:0 auto 36px}
+.avatar-wrap .avatar{margin:0}
+
+/* Hovers suaves */
+.btn{transition:background-color .25s ease,color .25s ease,transform .25s ease,box-shadow .25s ease}
+.card{transition:transform .35s ease,box-shadow .35s ease}
+.card .ico{transition:transform .5s ease}
+.navlink{position:relative}
+.navlink::after{content:"";position:absolute;left:12px;right:12px;bottom:8px;height:1px;background:#B8963E;transform:scaleX(0);transition:transform .3s ease}
+.nav-desk .navlink:hover::after{transform:scaleX(1)}
+.faq summary{transition:background-color .25s ease}
+.faq summary:hover{background:#FBF8F2}
+.trust-item .ico{transition:transform .4s ease}
+
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(47,93,80,.16)}
+  .card:hover{transform:translateY(-6px);box-shadow:0 2px 4px rgba(47,93,80,.04),0 18px 36px rgba(47,93,80,.09)}
+  .card:hover .ico{transform:scale(1.08)}
+  .trust-item:hover .ico{transform:rotate(-8deg) scale(1.06)}
+
+  /* Entrada do topo */
+  .hero h1{animation:heroIn 1.1s cubic-bezier(.2,.7,.2,1) .15s both}
+  .hero .gline{animation:lineIn 1.2s cubic-bezier(.2,.7,.2,1) .6s both}
+  .hero-sub{animation:heroIn 1s cubic-bezier(.2,.7,.2,1) .45s both}
+  .hero-cta{animation:heroIn 1s cubic-bezier(.2,.7,.2,1) .75s both}
+  .hdr{animation:rvFade .8s ease both}
+
+  /* Formas orgânicas flutuando devagar */
+  .float-a{animation:floatA 22s ease-in-out infinite alternate}
+  .float-b{animation:floatB 26s ease-in-out infinite alternate}
+  .ring svg{animation:spinSlow 60s linear infinite}
+  .fab{animation:rvFade .8s ease 1.2s both,breathe 4.5s ease-out 2.5s infinite}
+  .faq details[open] .ans{animation:ansIn .45s ease both}
+
+  @supports (animation-timeline: view()){
+    .reveal{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 45%}
+    .reveal.d2{animation-range:entry 8% entry 55%}
+    .reveal.d3{animation-range:entry 16% entry 65%}
+    .photo{animation:photoIn linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
+    .steps::before{animation:lineIn linear both;animation-timeline:view();animation-range:entry 20% cover 45%;transform-origin:left center}
+    .num{animation:popIn linear both;animation-timeline:view();animation-range:entry 10% entry 60%}
+    .step-tx .ico{animation:none}
+  }
+}
+@media (prefers-reduced-motion:no-preference) and (max-width:960px){
+  @supports (animation-timeline: view()){
+    .steps::before{animation-name:lineInY;transform-origin:center top}
+  }
+}
+
+/* Responsivo */
+@media (max-width:960px){
+  .nav-desk{display:none}
+  .menubtn{display:inline-flex}
+  .sobre-grid{grid-template-columns:minmax(0,1fr);gap:56px}
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .steps{grid-template-columns:minmax(0,1fr);gap:36px;max-width:420px;margin-left:auto;margin-right:auto}
+  .steps::before{top:32px;bottom:32px;left:31px;right:auto;width:1px;height:auto}
+  .step{flex-direction:row;align-items:flex-start;text-align:left;gap:20px}
+  .step-tx{display:flex;flex-direction:column;gap:8px;padding-top:12px}
+}
+@media (min-width:961px){
+  .step-tx{display:flex;flex-direction:column;align-items:center;gap:12px}
+}
+@media (max-width:720px){
+  .sec{padding:72px 0}
+  .hero{padding:72px 0 88px}
+  .hero h1{font-size:44px}
+  .hero-sub{font-size:17px}
+  .h2{font-size:36px}
+  .trust{padding:32px 0}
+  .trust-row{grid-template-columns:minmax(0,1fr)}
+  .trust-item{justify-content:flex-start;padding:16px 4px}
+  .trust-item + .trust-item{border-left:0;border-top:1px solid rgba(184,150,62,.6)}
+  .brand{font-size:22px;flex-direction:column;align-items:flex-start;justify-content:center;padding:8px 0}
+  .brand .bdot{display:none}
+  .brand .bsub{font-family:'Inter',system-ui,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.8;margin-top:2px}
+  .hero-cta .btn,.c-btns .btn{width:100%}
+  .c-list{align-items:flex-start}
+  .card{padding:30px 24px}
+}
+</style>
+</head>
+<body>
+<div class="ab" style="width: 100%; min-height: 100vh">
+
+  <!-- Menu fixo -->
+  <header class="hdr">
+    <div class="wrap hdr-in">
+      <a class="brand" href="#topo"><span class="bname">Alessandra Bratficher</span><span class="bdot">&#160;·&#160;</span><span class="bsub">Psicologia</span></a>
+      <nav class="nav nav-desk" aria-label="Navegação principal">
+        <a class="navlink" href="#sobre">Sobre</a>
+        <a class="navlink" href="#atendimento">Atendimento</a>
+        <a class="navlink" href="#como-funciona">Como funciona</a>
+        <a class="navlink" href="#perguntas">Perguntas</a>
+        <a class="navlink" href="#contato">Contato</a>
+      </nav>
+      <a class="btn btn-p btn-sm nav-desk" href="https://wa.me/5519997500082?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento." target="_blank" rel="noopener">WhatsApp</a>
+      <button class="menubtn" type="button" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-celular">
+        <span class="ic-close" hidden><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span>
+        <span class="ic-open"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></span>
+      </button>
+    </div>
+    <nav class="panel" id="menu-celular" hidden aria-label="Menu">
+        <a class="navlink" href="#sobre">Sobre</a>
+        <a class="navlink" href="#atendimento">Atendimento</a>
+        <a class="navlink" href="#como-funciona">Como funciona</a>
+        <a class="navlink" href="#perguntas">Perguntas</a>
+        <a class="navlink" href="#contato">Contato</a>
+        <a class="btn btn-p" href="https://wa.me/5519997500082?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento." target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+      </nav>
+  </header>
+
+  <main>
+
+    <!-- 1. Topo -->
+    <section class="sec sand hero" id="topo">
+      <svg class="blob float-a" style="right: -140px; top: -120px; width: 520px; height: 520px" viewBox="0 0 200 200" aria-hidden="true"><path fill="#A9BFAF" fill-opacity=".35" d="M44.7,-58.3C57.1,-49.5,66.1,-35.4,70.4,-19.7C74.7,-4,74.3,13.3,67.4,27.4C60.5,41.5,47.1,52.4,32.3,59.6C17.5,66.8,1.3,70.3,-15.6,68.4C-32.5,66.5,-50.1,59.2,-60.7,46.1C-71.3,33,-74.9,14.1,-72.1,-3.2C-69.3,-20.5,-60.1,-36.2,-47.4,-45.3C-34.7,-54.4,-17.4,-56.9,-0.6,-56.1C16.2,-55.4,32.3,-67.1,44.7,-58.3Z" transform="translate(100 100)"></path></svg>
+      <svg class="blob float-b" style="left: -160px; bottom: -180px; width: 420px; height: 420px" viewBox="0 0 200 200" aria-hidden="true"><path fill="#A9BFAF" fill-opacity=".22" d="M39.9,-51.6C52.3,-44.6,63.1,-33,67.6,-19.1C72.1,-5.2,70.3,11,63.4,24.4C56.5,37.8,44.5,48.4,30.8,55.6C17.1,62.8,1.7,66.6,-14.6,65.2C-30.9,63.8,-48.1,57.2,-58.6,44.9C-69.1,32.6,-72.9,14.6,-70.1,-1.9C-67.3,-18.4,-57.9,-33.4,-45.4,-40.6C-32.9,-47.8,-17.4,-47.2,-1.8,-44.8C13.8,-42.4,27.5,-58.6,39.9,-51.6Z" transform="translate(100 100)"></path></svg>
+      <div class="wrap rel">
+        <div class="read">
+          <h1>Psicoterapia em Cosmópolis e online</h1>
+          <span class="gline" aria-hidden="true"></span>
+          <p class="hero-sub">Psicóloga clínica desde 2003 · CRP <span class="pend">[CRP a inserir]</span></p>
+          <div class="hero-cta">
+            <a class="btn btn-p" href="https://wa.me/5519997500082?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+            <p class="small">Atendimento com hora marcada</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Faixa de confiança -->
+    <section class="white trust" aria-label="Destaques">
+      <div class="wrap">
+        <div class="trust-row reveal">
+          <div class="trust-item">
+            <svg class="ico" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <span>Mais de 20 anos de atuação</span>
+          </div>
+          <div class="trust-item">
+            <svg class="ico" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="13" height="10" rx="2"></rect><path d="M7 19h5M9.5 15v4"></path><rect x="17.5" y="9" width="4" height="9" rx="1"></rect></svg>
+            <span>Presencial e online</span>
+          </div>
+          <div class="trust-item">
+            <svg class="ico" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"></path><path d="M9.5 12l1.8 1.8L15 10"></path></svg>
+            <span>Sigilo e ética profissional</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Sobre -->
+    <section class="sec white" id="sobre" style="padding-top: 72px">
+      <div class="wrap sobre-grid">
+        <div class="photo-wrap">
+          <svg class="blob float-a" viewBox="0 0 200 200" aria-hidden="true"><path fill="#A9BFAF" fill-opacity=".55" d="M42.1,-56.9C54.5,-48.6,64.2,-35.9,68.9,-21.5C73.6,-7.1,73.3,9,67.2,22.6C61.1,36.2,49.2,47.3,35.7,55.4C22.2,63.5,7.1,68.6,-8.6,68.7C-24.3,68.8,-40.6,63.9,-52.6,53.3C-64.6,42.7,-72.3,26.4,-73.4,9.9C-74.5,-6.6,-69,-23.3,-58.9,-35.7C-48.8,-48.1,-34.1,-56.2,-19.5,-63.4C-4.9,-70.6,9.6,-76.9,22.5,-73.5C35.4,-70.1,29.7,-65.2,42.1,-56.9Z" transform="translate(100 100)"></path></svg>
+          <img class="photo" src="imagens/retrato-alessandra-sobre.webp" alt="Alessandra Bratficher, psicóloga" width="280" height="350" loading="lazy" decoding="async">
+        </div>
+        <div class="sobre-text read reveal d2">
+          <p class="eyebrow">SOBRE</p>
+          <h2 class="h2">Alessandra Bratficher</h2>
+          <div class="body">
+            <p>Psicóloga formada pela Universidade Metodista de Piracicaba em 2003, com pós-graduação em Administração de Recursos Humanos <span class="pend">[confirmar formação]</span>.</p>
+            <p>Atua nas áreas clínica, social e do trabalho e organizacional.</p>
+            <p>Atende em Cosmópolis, SP, e também online.</p>
+          </div>
+          <p class="crp">CRP <span class="pend">[CRP a inserir]</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Atendimento -->
+    <section class="sec sand" id="atendimento">
+      <svg class="blob float-b" style="right: -180px; bottom: -160px; width: 440px; height: 440px" viewBox="0 0 200 200" aria-hidden="true"><path fill="#A9BFAF" fill-opacity=".22" d="M44.7,-58.3C57.1,-49.5,66.1,-35.4,70.4,-19.7C74.7,-4,74.3,13.3,67.4,27.4C60.5,41.5,47.1,52.4,32.3,59.6C17.5,66.8,1.3,70.3,-15.6,68.4C-32.5,66.5,-50.1,59.2,-60.7,46.1C-71.3,33,-74.9,14.1,-72.1,-3.2C-69.3,-20.5,-60.1,-36.2,-47.4,-45.3C-34.7,-54.4,-17.4,-56.9,-0.6,-56.1C16.2,-55.4,32.3,-67.1,44.7,-58.3Z" transform="translate(100 100)"></path></svg>
+      <div class="wrap rel">
+        <h2 class="h2 center reveal">Atendimento</h2>
+        <div class="cards">
+          <article class="card reveal">
+            <svg class="ico" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h11a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9l-3.5 3v-3H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2z"></path><path d="M19 9h1a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2h-1v2.5l-3-2.5h-3"></path></svg>
+            <h3>Psicoterapia individual</h3>
+            <p>Um espaço de escuta para falar sobre o que você está vivendo, com sigilo e ética.</p>
+          </article>
+          <article class="card reveal d2">
+            <svg class="ico" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="14" height="11" rx="2"></rect><path d="M16.5 9.5l5-3v10l-5-3"></path><path d="M7 20h5"></path></svg>
+            <h3>Atendimento online</h3>
+            <p>Sessões por videochamada, para quem prefere ou precisa ser atendido a distância.</p>
+          </article>
+          <article class="card reveal d3">
+            <svg class="ico" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7.5" width="18" height="12" rx="2"></rect><path d="M9 7.5V5.5a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 5.5v2"></path><path d="M3 12.5h18"></path></svg>
+            <h3>Psicologia do trabalho e organizacional <span class="pend" style="font-family: 'Inter', sans-serif; font-size: 13px; vertical-align: middle; color: #2B2B2B">[confirmar]</span></h3>
+            <p>Orientação profissional e palestras sobre temas ligados ao trabalho.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Como funciona -->
+    <section class="sec white" id="como-funciona">
+      <div class="wrap">
+        <h2 class="h2 center reveal">Como funciona</h2>
+        <ol class="steps" style="list-style: none; padding: 0">
+          <li class="step reveal">
+            <span class="num" aria-hidden="true">1</span>
+            <div class="step-tx">
+              <h3>Contato</h3>
+              <p>Você envia uma mensagem pelo WhatsApp e combina o melhor horário, presencial ou online.</p>
+            </div>
+          </li>
+          <li class="step reveal d2">
+            <span class="num" aria-hidden="true">2</span>
+            <div class="step-tx">
+              <h3>Primeira conversa</h3>
+              <p>Um encontro para você contar o que te trouxe e tirar suas dúvidas sobre o atendimento.</p>
+            </div>
+          </li>
+          <li class="step reveal d3">
+            <span class="num" aria-hidden="true">3</span>
+            <div class="step-tx">
+              <h3>Acompanhamento</h3>
+              <p>A frequência e a duração das sessões são combinadas em conjunto <span class="pend">[confirmar duração e frequência]</span>.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="cta-center reveal">
+          <a class="btn btn-p" href="https://wa.me/5519997500082?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Perguntas frequentes -->
+    <section class="sec sand" id="perguntas">
+      <svg class="blob float-a" style="left: -170px; top: -140px; width: 420px; height: 420px" viewBox="0 0 200 200" aria-hidden="true"><path fill="#A9BFAF" fill-opacity=".22" d="M39.9,-51.6C52.3,-44.6,63.1,-33,67.6,-19.1C72.1,-5.2,70.3,11,63.4,24.4C56.5,37.8,44.5,48.4,30.8,55.6C17.1,62.8,1.7,66.6,-14.6,65.2C-30.9,63.8,-48.1,57.2,-58.6,44.9C-69.1,32.6,-72.9,14.6,-70.1,-1.9C-67.3,-18.4,-57.9,-33.4,-45.4,-40.6C-32.9,-47.8,-17.4,-47.2,-1.8,-44.8C13.8,-42.4,27.5,-58.6,39.9,-51.6Z" transform="translate(100 100)"></path></svg>
+      <div class="wrap rel">
+        <h2 class="h2 center reveal">Perguntas frequentes</h2>
+        <div class="faq reveal">
+          <details>
+            <summary>Como é a primeira sessão?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
+            <p class="ans">É um momento para você contar o que te trouxe, no seu tempo, e entender como funciona o atendimento.</p>
+          </details>
+          <details>
+            <summary>Como funciona o atendimento online?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
+            <p class="ans">As sessões acontecem por videochamada. Basta escolher um lugar reservado e tranquilo. O compromisso com o sigilo é o mesmo do atendimento presencial.</p>
+          </details>
+          <details>
+            <summary>O que eu falar fica em sigilo?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
+            <p class="ans">Sim. O sigilo é um dever ético da psicóloga, previsto no Código de Ética Profissional do Psicólogo. Qualquer dúvida sobre isso pode ser conversada na primeira sessão.</p>
+          </details>
+          <details>
+            <summary>Como faço para agendar?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
+            <p class="ans">Pelo WhatsApp (19) 99750-0082. O atendimento é com hora marcada: <span class="pend">[inserir horários de atendimento]</span>.</p>
+          </details>
+          <details>
+            <summary>Quanto tempo dura o processo?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
+            <p class="ans">Varia de pessoa para pessoa. A duração é conversada ao longo do acompanhamento.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Contato -->
+    <section class="sec white contato" id="contato">
+      <div class="wrap reveal">
+        <div class="avatar-wrap">
+          <span class="ring" aria-hidden="true"><svg width="188" height="188" viewBox="0 0 188 188" fill="none"><circle cx="94" cy="94" r="92" stroke="currentColor" stroke-width="1" stroke-dasharray="2 7" stroke-linecap="round"></circle></svg></span>
+          <img class="avatar" src="imagens/retrato-alessandra-contato.webp" alt="Alessandra Bratficher" width="160" height="160" loading="lazy" decoding="async">
+        </div>
+        <h2 class="h2">Contato</h2>
+        <ul class="c-list">
+          <li>
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
+            <span>R. Adriano Catozi, 201, Jardim Paulista, Cosmópolis, SP</span>
+          </li>
+          <li>
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.3 18.4l-3.8 1.1z"></path><path d="M9.2 8.6c.3 2.6 2.3 4.9 5 5.6l1-1.1 1.8.8-.3 1.6c-3.9.2-7.5-3.3-7.4-7.2l1.6-.3.8 1.8-1 .8z"></path></svg>
+            <span>(19) 99750-0082 <span class="pend" style="font-size: 13px">[confirmar que é o WhatsApp do atendimento]</span></span>
+          </li>
+          <li>
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>
+            <span>Atendimento presencial e online, com hora marcada</span>
+          </li>
+        </ul>
+        <div class="c-btns">
+          <a class="btn btn-p" href="https://wa.me/5519997500082?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento." target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+          <a class="btn btn-s" href="https://www.google.com/maps/search/?api=1&amp;query=R.+Adriano+Catozi,+201,+Jardim+Paulista,+Cosm%C3%B3polis,+SP" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+        <a class="insta" href="https://www.instagram.com/alebratficher/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"></circle></svg>
+          <span>@alebratficher</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 8. Aviso de crise -->
+    <aside class="crise" aria-label="Aviso">
+      <div class="wrap"><p>Em situação de crise, procure o CVV (188) ou o SAMU (192).</p></div>
+    </aside>
+
+  </main>
+
+  <!-- 9. Rodapé -->
+  <footer class="foot">
+    <div class="wrap">
+      <p class="fbrand">Alessandra Bratficher · Psicologia</p>
+      <p class="fl">Psicóloga · CRP <span class="pend" style="color: #2B2B2B">[CRP a inserir]</span></p>
+      <p class="fl">Cosmópolis, SP · Presencial e online</p>
+      <div class="rule"></div>
+      <p class="credit">Projeto de demonstração criado por Júlio Farias · Viralix · <a href="https://www.instagram.com/juliofariasoficial/" target="_blank" rel="noopener">@juliofariasoficial</a></p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a class="fab" href="https://wa.me/5519997500082?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.3 18.4l-3.8 1.1z"></path><path d="M9.2 8.6c.3 2.6 2.3 4.9 5 5.6l1-1.1 1.8.8-.3 1.6c-3.9.2-7.5-3.3-7.4-7.2l1.6-.3.8 1.8-1 .8z"></path></svg>
+  </a>
+
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('menu-btn'),panel=document.getElementById('menu-celular');
+  var io=btn.querySelector('.ic-open'),ic=btn.querySelector('.ic-close');
+  function set(open){
+    panel.hidden=!open;io.hidden=open;ic.hidden=!open;
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+  }
+  btn.addEventListener('click',function(){set(panel.hidden);});
+  panel.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden){set(false);btn.focus();}});
+})();
+</script>
+</body>
+</html>
